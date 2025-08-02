@@ -8,12 +8,14 @@
   --peach-dark: #E8B49E;
   --background: #F9F9F9;
   --text-dark: #2B2B2B;
+  --text-hyperlink: #FF9933
   --accent: #FF9E7C;
 }
 
 body {
   background-color: var(--background);
   color: var(--text-dark);
+  a{color: var(--text-hyperlink)};
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
