@@ -1,104 +1,85 @@
-/* beyond.css - Styling for Bakkie and Beyond */
-
-/* Color palette */
-:root {
-  --peach: #FFD1BA;
-  --denim: #7CA4C4;
-  --denim-dark: #53779A;
-  --peach-dark: #E8B49E;
-  --background: #F9F9F9;
-  --text-dark: #2B2B2B;
-  --text-hyperlink: #FF9933
-  --accent: #FF9E7C;
-}
-
+/* Base setup */
 body {
-  background-color: var(--background);
-  color: var(--text-dark);
-  a{color: var(--text-hyperlink)};
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
-  padding: 0;
+  font-family: 'Work Sans', sans-serif;
+  background-color: #fffaf7;
+  color: #2f2f2f;
+  line-height: 1.6;
 }
 
+/* Header */
 header {
-  background: linear-gradient(90deg, var(--denim-dark), var(--denim));
-  color: white;
-  padding: 1.5rem;
-  text-align: center;
-  border-bottom: 4px solid var(--peach);
-}
-
-nav a {
-  color: var(--peach);
-  text-decoration: none;
-  margin: 0 0.75rem;
-  font-weight: bold;
-}
-
-nav a:hover {
-  text-decoration: underline;
-  color: var(--accent);
-}
-
-main {
+  background: linear-gradient(to right, #6d8ca0, #ffdac8);
   padding: 2rem;
-  max-width: 960px;
-  margin: 0 auto;
+  text-align: center;
 }
 
-section {
-  background-color: white;
+header img {
+  max-height: 100px;
+  margin-bottom: 1rem;
+}
+
+header p {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #2f2f2f;
+}
+
+/* Sections */
+.section {
+  padding: 3rem 2rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.section h2 {
+  color: #6d8ca0;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  text-align: center;
+}
+
+/* Grid layout for cards */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+/* Cards */
+.card {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 1rem;
   padding: 1.5rem;
-  border-left: 5px solid var(--denim-dark);
-  margin-bottom: 2rem;
-  border-radius: 0.5rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
 }
 
-h1, h2, h3 {
-  color: var(--denim-dark);
+.card h3 {
+  color: #6d8ca0;
+  margin-top: 0;
 }
 
+.card:hover {
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* Contact links */
 a {
-  color: var(--denim-dark);
-  transition: color 0.2s ease-in-out;
+  color: #e2835d;
+  text-decoration: none;
 }
 
 a:hover {
-  color: var(--accent);
-}
-
-footer {
-  background: var(--denim);
-  color: white;
-  text-align: center;
-  padding: 1rem;
-  margin-top: 2rem;
-  border-top: 4px solid var(--peach);
-}
-
-.button {
-  background-color: var(--peach);
-  color: var(--text-dark);
-  padding: 0.5rem 1rem;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: background-color 0.2s;
-}
-
-.button:hover {
-  background-color: var(--peach-dark);
-}
-
-/* Link inside light backgrounds fix */
-section a {
-  color: var(--denim-dark);
   text-decoration: underline;
 }
 
-section a:hover {
-  color: var(--accent);
+/* Footer */
+.footer {
+  background-color: #2f2f2f;
+  color: #eee;
+  padding: 2rem;
+  text-align: center;
+  font-size: 0.9rem;
 }
