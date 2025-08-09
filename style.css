@@ -60,6 +60,7 @@ body {
 .intro, .services, .community, .contact {
   padding: 2rem;
   text-align: center;
+  background: var(--honeydew);
 }
 
 .contact-options {
