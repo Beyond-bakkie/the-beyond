@@ -1,85 +1,110 @@
-/* Base setup */
+:root {
+  --peach: #f6c9a0;
+  --denim: #44617d;
+  --white: #fff;
+  --honeydew: #F0FFF0;
+  --bg: #fff8f5;
+}
+
 body {
   margin: 0;
-  font-family: 'Work Sans', sans-serif;
-  background-color: #fffaf7;
-  color: #2f2f2f;
-  line-height: 1.6;
+  font-family: 'Segoe UI', sans-serif;
+  color: var(--denim);
+  background-color: var(--bg);
 }
 
-/* Header */
-header {
+#splash {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  z-index: 999;
   background: linear-gradient(to right, #6d8ca0, #ffdac8);
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: fadeOut 2s ease forwards;
+  animation-delay: 2s;
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+#splash h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.carousel {
+  overflow: hidden;
+  height: 300px;
+  background: linear-gradient(to right, #6d8ca0, #ffdac8);;
+}
+
+.carousel-track {
+  display: flex;
+  animation: scroll 25s linear infinite;
+}
+
+.carousel-track img {
+  width: 100%;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.intro, .services, .community, .contact {
   padding: 2rem;
   text-align: center;
 }
 
-header img {
-  max-height: 100px;
-  margin-bottom: 1rem;
+.contact-options {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
 }
 
-header p {
-  font-size: 1.2rem;
-  font-weight: 500;
-  color: #2f2f2f;
-}
-
-/* Sections */
-.section {
-  padding: 3rem 2rem;
-  max-width: 1000px;
-  margin: auto;
-}
-
-.section h2 {
-  color: #6d8ca0;
-  margin-bottom: 1.5rem;
-  font-size: 2rem;
-  text-align: center;
-}
-
-/* Grid layout for cards */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-}
-
-/* Cards */
-.card {
-  background: #ffffff;
-  border: 1px solid #ddd;
-  border-radius: 1rem;
-  padding: 1.5rem;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-  transition: all 0.3s ease;
-}
-
-.card h3 {
-  color: #6d8ca0;
-  margin-top: 0;
-}
-
-.card:hover {
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-}
-
-/* Contact links */
-a {
-  color: #e2835d;
+.contact-box {
+  background: var(--denim);
+  color: var(--white);
+  padding: 1rem 2rem;
+  border-radius: 8px;
   text-decoration: none;
+  font-weight: bold;
+  transform: translateY(100px);
+  opacity: 0;
+  animation: slideUp 1s ease forwards;
 }
 
-a:hover {
-  text-decoration: underline;
-}
+.contact-box:nth-child(2) { animation-delay: 0.3s; }
+.contact-box:nth-child(3) { animation-delay: 0.6s; }
 
-/* Footer */
-.footer {
-  background-color: #2f2f2f;
-  color: #eee;
-  padding: 2rem;
+footer {
+  background: #2f2f2f;
+  padding: 1rem;
   text-align: center;
-  font-size: 0.9rem;
+}
+
+/* Animations */
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+@keyframes slideUp {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
 }
