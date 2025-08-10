@@ -52,7 +52,7 @@ body {
 }
 
 .carousel-track img {
-  max-height: 300;
+  max-height: 300px;
   width: 500px;
   object-fit: cover ;
 }
