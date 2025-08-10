@@ -4,7 +4,207 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Bakkie & Beyond</title>
-  <link rel="stylesheet" href="style.css"/>
+  <style>
+    :root {
+      --peach: #f6c9a0;
+      --denim: #44617d;
+      --white: #fff;
+      --honeydew: #F0FFF0;
+      --bg: #fff8f5;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      color: var(--denim);
+      background-color: var(--bg);
+      line-height: 1.6;
+    }
+
+    #splash {
+      position: fixed;
+      top: 0; 
+      left: 0;
+      width: 100%; 
+      height: 100%;
+      z-index: 999;
+      background: linear-gradient(135deg, #6d8ca0, #ffdac8);
+      color: var(--white);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      animation: fadeOut 2s ease forwards;
+      animation-delay: 2s;
+    }
+
+    #splash h1 {
+      font-size: 3rem;
+      margin: 0;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+
+    #splash p {
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
+      opacity: 0.9;
+    }
+
+    .carousel {
+      overflow: hidden;
+      height: 300px;
+      background: linear-gradient(135deg, #6d8ca0, #ffdac8);
+      position: relative;
+    }
+
+    .carousel-track {
+      display: flex;
+      animation: scroll 25s linear infinite;
+      height: 100%;
+    }
+
+    .carousel-track img {
+      width: 300px;
+      height: 280px;
+      object-fit: cover;
+      padding: 10px;
+      border-radius: 8px;
+      flex-shrink: 0;
+    }
+
+    .intro, .services, .community, .contact {
+      padding: 3rem 2rem;
+      text-align: center;
+      background: var(--honeydew);
+      margin: 0;
+    }
+
+    .intro h2, .services h2, .community h2, .contact h2 {
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+      color: var(--denim);
+    }
+
+    .intro p, .community p {
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: 0 auto;
+      color: #555;
+    }
+
+    .services ul {
+      list-style: none;
+      padding: 0;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .services li {
+      background: var(--white);
+      margin: 1rem 0;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      border-left: 4px solid var(--peach);
+      font-size: 1.1rem;
+    }
+
+    .contact-options {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+    }
+
+    .contact-box {
+      background: var(--denim);
+      color: var(--white);
+      padding: 1.2rem 2rem;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1rem;
+      transform: translateY(50px);
+      opacity: 0;
+      animation: slideUp 1s ease forwards;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+
+    .contact-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    }
+
+    .contact-box:nth-child(1) { animation-delay: 0.2s; }
+    .contact-box:nth-child(2) { animation-delay: 0.4s; }
+    .contact-box:nth-child(3) { animation-delay: 0.6s; }
+
+    footer {
+      background: #2f2f2f;
+      color: var(--white);
+      padding: 1.5rem;
+      text-align: center;
+      font-style: italic;
+    }
+
+    /* Animations */
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    @keyframes slideUp {
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeOut {
+      to {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      #splash h1 {
+        font-size: 2rem;
+      }
+      
+      .intro h2, .services h2, .community h2, .contact h2 {
+        font-size: 1.8rem;
+      }
+      
+      .contact-options {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .contact-box {
+        width: 200px;
+        text-align: center;
+      }
+      
+      .carousel-track img {
+        width: 250px;
+        height: 230px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .intro, .services, .community, .contact {
+        padding: 2rem 1rem;
+      }
+      
+      .services li {
+        padding: 1rem;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -29,19 +229,18 @@
   <!-- Intro -->
   <section class="intro">
     <h2>Here for your house and home</h2>
-    <p>From fixing a leaky tap to wrangling that wall you keep meaning to paint — I’m here to get it done without the runaround. Serving Roodepoort, Krugersdorp, Florida, and Randburg.</p>
+    <p>From fixing a leaky tap to wrangling that wall you keep meaning to paint — I'm here to get it done without the runaround. Serving Roodepoort, Krugersdorp, Florida, and Randburg.</p>
   </section>
 
   <!-- Services -->
   <section class="services">
     <h2>Why people call me</h2>
     <ul>
-      <li>Clear quotes. No surprises. Zero hassle honoring the 6 month guarantee on my workmanship..</li>
+      <li>Clear quotes. No surprises. Zero hassle honoring the 6 month guarantee on my workmanship.</li>
       <li>Work done right, even if it takes longer.</li>
-      <li>If I can’t fix it, I’ll find someone I trust who can.</li>
+      <li>If I can't fix it, I'll find someone I trust who can.</li>
     </ul>
   </section>
-
   <!-- Second Carousel -->
   <section class="carousel">
     <div class="carousel-track">
@@ -57,12 +256,12 @@
   <!-- Community -->
   <section class="community">
     <h2>Community matters</h2>
-    <p>I know what it’s like when something breaks and money’s tight. That’s why I offer up to <strong>50% off labour</strong> for those who need it most. No awkward conversations. Just honest help.</p>
+    <p>I know what it's like when something breaks and money's tight. That's why I offer up to <strong>50% off labour</strong> for those who need it most. No awkward conversations. Just honest help.</p>
   </section>
 
   <!-- Contact -->
   <section class="contact">
-    <h2>Let’s Fix It</h2>
+    <h2>Let's Fix It</h2>
     <div class="contact-options">
       <a href="https://wa.me/27670903299" target="_blank" class="contact-box">📱 WhatsApp</a>
       <a href="https://facebook.com/BakkieAndBeyond" target="_blank" class="contact-box">📘 Facebook</a>
@@ -75,6 +274,5 @@
     <p>Written with tact, tenacity & caffeine. © Bakkie & Beyond</p>
   </footer>
 
-  <script src="script.js"></script>
 </body>
 </html>
