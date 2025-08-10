@@ -43,7 +43,8 @@ body {
 .carousel {
   overflow: hidden;
   height: 300px;
-  background: linear-gradient(to right, #6d8ca0, #ffdac8);;
+  background: linear-gradient(to right, #6d8ca0, #ffdac8);
+  position: relative;
 }
 
 .carousel-track {
