@@ -61,7 +61,7 @@ body {
 
 @keyframes scroll {
   0% { transform: translateX(0); }
-  100% { transform: translateX(100%); } /* Only scroll halfway because images are doubled */
+  100% { transform: translateX(50%); } /* Only scroll halfway because images are doubled */
 }
 
 .intro, .services, .community, .contact {
