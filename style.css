@@ -63,8 +63,8 @@ body {
 }
 
 @keyframes scroll {
-  0% { transform: translateX(50%); }
-  100% { transform: translateX(50%); } /* Only scroll halfway because images are doubled */
+  0% { transform: translateX(50); }
+  100% { transform: translateX(-50%); } /* Only scroll halfway because images are doubled */
 }
 
 .intro, .services, .community, .contact {
