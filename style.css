@@ -57,7 +57,7 @@ body {
   object-fit: cover; /* keeps image fully visible without distortion */
   /*background-color: #fff;*/
   padding: 5px; /* optional - visual breathing room */
-  flex-shrink: 0;
+  flex-shrink: 0;flex-growth: 0;
 }
 
 @keyframes scroll {
