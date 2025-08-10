@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+/*document.addEventListener("DOMContentLoaded", () => {
   const splash = document.getElementById("splash");
   const firstCarousel = document.getElementById("first-carousel");
 
@@ -7,4 +7,4 @@ document.addEventListener("DOMContentLoaded", () => {
     splash.style.display = "none"; // remove it completely
     firstCarousel.scrollIntoView({ behavior: "smooth" });
   }, 2500); // matches fade animation timing
-});
+});*/
