@@ -55,7 +55,6 @@ body {
   max-height: 300;
   width: 500px;
   object-fit: cover ;
-  Flex: 0 0 auto;
 }
 
 @keyframes scroll {
