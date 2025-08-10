@@ -54,7 +54,7 @@ body {
 .carousel-track img {
   max-height: 300;
   width: 500px;
-  object-fit: centered;
+  object-fit: auto;
   Flex: 0 0 auto;
 }
 
