@@ -52,7 +52,7 @@ body {
 }
 
 .carousel-track img {
-  width: 300px; /* each slot width */
+  min-width: 300px; max-width: 300px;/* each slot width */
   height: 280px; /* each slot height */
   object-fit: cover; /* keeps image fully visible without distortion */
   /*background-color: #fff;*/
