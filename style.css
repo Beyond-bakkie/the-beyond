@@ -55,8 +55,9 @@ body {
   width: 300px; /* each slot width */
   height: 280px; /* each slot height */
   object-fit: cover; /* keeps image fully visible without distortion */
-  //background-color: #fff; /* optional - fills empty space */
+  /*background-color: #fff;*/
   padding: 5px; /* optional - visual breathing room */
+  flex-shrink: 0;
 }
 
 @keyframes scroll {
